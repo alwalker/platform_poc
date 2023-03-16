@@ -1,0 +1,20 @@
+<configuration>
+  <property>
+    <name>fs.azure.account.auth.type.mystorageaccount.dfs.core.windows.net</name>
+    <value>SharedKey</value>
+    <description>
+    </description>
+  </property>
+  <property>
+    <name>fs.azure.account.key.mystorageaccount.dfs.core.windows.net</name>
+    <value></value>
+    <description>
+    The secret password. Never share these.
+    </description>
+  </property>
+  <property>
+    <name>hive.metastore.warehouse.dir</name>
+    <value>abfs://dev-databricks@mystorageaccount.dfs.core.windows.net/</value>
+    <description>location of default database for the warehouse</description>
+</property>
+</configuration>

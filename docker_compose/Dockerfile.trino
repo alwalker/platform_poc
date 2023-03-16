@@ -1,0 +1,9 @@
+FROM trinodb/trino
+
+COPY hive.properties /etc/trino/catalog/
+COPY conf/core-site.xml /etc/trino/
+COPY conf/acme.jks /etc/trino/
+
+RUN echo "jmx.rmiregistry.port=9080" >> /etc/trino/config.properties
+RUN echo "jmx.rmiserver.port=9081" >> /etc/trino/config.properties
+RUN echo "-Dcom.sun.management.jmxremote.rmi.port=9081" >> /etc/trino/jvm.config

@@ -1,0 +1,30 @@
+<configuration>
+<property>
+	<name>metastore.task.threads.always</name>
+	<value>org.apache.hadoop.hive.metastore.events.EventCleanerTask</value>
+</property>
+<property>
+	<name>metastore.expression.proxy</name>
+	<value>org.apache.hadoop.hive.metastore.DefaultPartitionExpressionProxy</value>
+</property>
+<property>
+	<name>javax.jdo.option.ConnectionDriverName</name>
+	<value>org.postgresql.Driver</value>
+</property>
+<property>
+	<name>javax.jdo.option.ConnectionURL</name>
+	<value>jdbc:postgresql://${hive_database_name}:5432/${db_name}?sslmode=require</value>
+</property>
+<property>
+	<name>javax.jdo.option.ConnectionUserName</name>
+	<value>${db_username}</value>
+</property>
+<property>
+	<name>javax.jdo.option.ConnectionPassword</name>
+	<value>${db_password}</value>
+</property>
+<property>
+	<name>metastore.thrift.port</name>
+	<value>${thrift_port}</value>
+</property>
+</configuration>
